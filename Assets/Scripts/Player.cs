@@ -10,13 +10,13 @@ public class Player : MonoBehaviour
     private Rigidbody2D _rigidbody2D;
 
     // Start is called before the first frame update
-    void Start()
+    protected void Start()
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
-    void Update()
+    protected void Update()
     {
         Vector2 force = new Vector2();
         if (Input.GetKey(KeyCode.A))
@@ -39,7 +39,7 @@ public class Player : MonoBehaviour
             force.y = -1.0f;
         }
 
-        
+
         _rigidbody2D.AddForce(force.normalized * _strength);
     }
 }

@@ -7,6 +7,6 @@ public class Hittable : MonoBehaviour
 
     public void ReceiveHit(int damage = 0)
     {
-        OnHit(0);
+        OnHit(damage);
     }
 }

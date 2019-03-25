@@ -71,7 +71,15 @@ public class SmartCamera : MonoBehaviour
             newTarget.y = _currentGridY * _screenHeight;
             _target = newTarget;
         }
-        
+
         transform.position -= (transform.position - _target) / 8.0f;
+
+        // Round to the nearest multiple of 1/32
+//        float multiple = 1.0f/32f;
+//        Vector3 position = transform.position;
+//        position.x = Mathf.Ceil(position.x / multiple) * multiple;
+//        position.y = Mathf.Ceil(position.y / multiple) * multiple;
+//        transform.position = position;
+//        Debug.Log(transform.position);
     }
 }

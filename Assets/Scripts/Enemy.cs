@@ -2,7 +2,7 @@
 
 public class Enemy : MonoBehaviour
 {
-    private int _health = 1;
+    private int _health = 4;
 
     // Start is called before the first frame update
     protected void Start()

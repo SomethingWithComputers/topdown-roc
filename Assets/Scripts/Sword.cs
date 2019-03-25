@@ -1,8 +1,11 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Sword : MonoBehaviour
 {
+    public static Action<Sword> OnSwing = delegate { };
+
     private List<Hittable> _hittablesInRange = null;
 
     private void Start()
@@ -14,6 +17,8 @@ public class Sword : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            OnSwing(this);
+
             // Might cause problems! Multithreading..
             foreach (Hittable hittable in _hittablesInRange.ToArray())
             {
