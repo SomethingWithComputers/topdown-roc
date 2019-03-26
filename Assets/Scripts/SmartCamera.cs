@@ -72,7 +72,7 @@ public class SmartCamera : MonoBehaviour
             _target = newTarget;
         }
 
-        transform.position -= (transform.position - _target) / 8.0f;
+        transform.position -= (transform.position - _target) / 4.0f;
 
         // Round to the nearest multiple of 1/32
 //        float multiple = 1.0f/32f;

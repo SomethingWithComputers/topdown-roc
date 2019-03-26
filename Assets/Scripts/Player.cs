@@ -39,7 +39,6 @@ public class Player : MonoBehaviour
             force.y = -1.0f;
         }
 
-
         _rigidbody2D.AddForce(force.normalized * _strength);
     }
 }
